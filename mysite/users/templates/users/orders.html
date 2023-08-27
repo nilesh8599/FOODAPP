@@ -1,0 +1,31 @@
+{% extends 'food/base.html' %}
+
+{% block body %}
+
+<br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header text-white bg-success">
+                    <div class="class-title">
+                        Login
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <br>
+                            <p >Are you sure you want to confirm the order for <b> product {{ pdcd }}</b>  by <b>{{ user }}</b></p> 
+                            <label for="qty">Enter Quantity: </label>
+                            <input id="qty" name="qty">
+                            <button class="btn btn-danger btn-sm" type="submit">Confirm</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

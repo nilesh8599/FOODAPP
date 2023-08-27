@@ -1,0 +1,36 @@
+{% extends 'food/base.html' %}
+
+{% block body %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Confirm</button>
+</form>
+
+<!-- <br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header text-white bg-info">
+                    <div class="class-title">
+                        Update Ratings and Feedbacks
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            <label>Ratings</label><br>
+                            {{ form.ratings }}
+                            <br><label>Feedback</label><br>
+                            {{ form.feedback }}
+                            <br><br><button class="btn btn-success btn-sm" type="submit">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+{% endblock %}

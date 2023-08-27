@@ -1,0 +1,31 @@
+{% extends 'food/base.html' %}
+
+{% block body %}
+
+<br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header text-white bg-info">
+                    <div class="class-title">
+                        Login
+                    </div>
+                    <div class="card-body">
+                        <form action="../login_ud/" method="POST">
+                            {% csrf_token %}
+                            <label>Username: </label><br>
+                            {{ form.username }}
+                            <br><label>Password: </label><br>
+                            {{ form.password }}
+                            <button type="submit" class="btn btn-success" style="padding-left: 5px;">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
